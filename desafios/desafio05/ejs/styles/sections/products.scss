@@ -1,0 +1,45 @@
+@use "../abstracts/vars.scss" as *;
+
+.list-group {
+    width: 100%;
+    height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  background-color: map-get($colors, C);
+  
+  .list-group__item {
+      width: auto;
+      height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    .list-group__item__img {
+      width: 140px;
+      height: auto;
+    }
+    .list-group__item__title {
+        
+      color: map-get($colors, C);
+      font-size: 2rem;
+      font-family: $font-subtitle-it;
+      text-align: center;
+      padding: 1rem;
+      background-color: map-get($headings, h3);
+      margin-top: 1rem;
+    }
+    .list-group__item__price {
+        color: map-get($colors, F);
+        font-size: map-get($headings, p);
+        font-family: $font-subtitle-condensed;
+        text-align: center;
+        padding: 1rem;
+        max-width: 500px;
+        margin-top: 1rem;
+      }
+  }
+}

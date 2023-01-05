@@ -1,0 +1,7 @@
+/*
+DBaas is a library that provides functions for creating and managing databases and collections that are used internally 
+
+firebase is an open source library that provides functions for creating and managing databases and collections that are used internally
+
+DBaas es una opcion mas economica pero por ejemplo un banco debe tener su propio servidior y base de datos
+*/

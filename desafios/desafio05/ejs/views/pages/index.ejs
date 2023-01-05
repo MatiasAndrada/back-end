@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs') %>
+  </head>
+  <body>
+    <%- include('../partials/header.ejs')%>
+    <div class="form__container">
+      <h1 class="form__title">Registrar un producto</h1>
+      <% if (itemCount > 0) {%>
+      <p class="form__subtitle">Productos en lista: <%= itemCount %></p>
+      <% } %>
+
+      <form class="form__form" method="POST" action="/">
+        <div class="form-group">
+          <label class="text__item">Enter name</label>
+          <input
+            type="text"
+            class="form-control"
+            aria-describedby="emailHelp"
+            placeholder="Enter name"
+            name="name"
+          />
+        </div>
+        <div class="form-group">
+          <label class="text__item">Price</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter price"
+            name="price"
+          />
+        </div>
+        <div class="form-group">
+          <label class="text__item">Thumbnail</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter thumbnail"
+            name="thumbnail"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar</button>
+      </form>
+    </div>
+  </body>
+</html>

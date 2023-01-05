@@ -1,0 +1,39 @@
+@use "../abstracts/vars.scss" as *;
+
+.list__product {
+  list-style: none;
+  padding: 8px;
+  height: 80vh;
+  overflow-y: scroll;
+  word-wrap: break-word;
+  background-color: map-get($colors, D);
+  display: flex;
+  flex-direction: column;
+}
+.list__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  background-color: map-get($colors, A);
+  padding: 10px 0;
+  height: auto;
+}
+
+.list__item--img {
+  height: 80px;
+  object-fit: cover;
+  border-radius: map-get($b-radius, small);
+}
+.list__item--title {
+  font-family: $font-title;
+  font-size: map-get($headings, h3);
+  align-self: center;
+  color: white;
+}
+.list__item--total {
+  font-family: $font-subtitle;
+  font-size: map-get($headings, h4);
+  align-self: center;
+  color: white;
+}

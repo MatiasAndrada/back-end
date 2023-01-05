@@ -1,0 +1,19 @@
+doctype html
+html
+  include ../includes/head.pug
+body
+  include ../includes/header.pug
+  div(class="form__container")
+    h1(class="form__title") Formulario de registro
+    p(class="form__subtitle")= "Productos en lista:" + itemCount
+      form(class="form__form" action="/" method="POST")
+        div(class="form-group")
+          label(clasname="text-item" for="name") Nombre
+          input(type="text" name="name" id="name" class=" form-control" placeholder="Ingrese nombre")
+        div(class="form__group form-group")
+          label(clasname="text-item" for="price") Precio
+          input(type="number" name="price" id="price" class=" form-control" placeholder="Ingrese precio")
+        div(class="form__group form-group")
+          label(clasname="text-item" for="thumbnail") URL de imagen
+          input(type="text" name="thumbnail" id="thumbnail" class=" form-control" placeholder="Ingrese URL de imagen")
+        button(type="submit" class="btn btn-primary") Enviar

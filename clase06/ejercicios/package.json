@@ -1,0 +1,18 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "06_problem_02.js",
+  "scripts": {
+    "start": "nodemon 06_problem_02.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MatiasAndrada",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

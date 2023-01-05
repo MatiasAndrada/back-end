@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>vista</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="/">
+            <img src="./assets/icon.png" width="140" alt="Icon">
+        </a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link text-link active disabled" href="userCart.html">Admin</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="sign-in-form">
+        <form id="signInForm">
+            <h2 class="text-center">Sign In</h2>
+            <p class="text-center m-1">Debes iniciar sesion para ver tu carrito!</p>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control m-1" aria-describedby="emailHelp" placeholder="Enter email"
+                    id="email-input">
+                <input type="password" class="form-control m-1" placeholder="Password" id="password-input">
+            </div>
+            <button type="submit" class="btn btn-primary m-3" id="sign-in-btn">Submit</button>
+        </form>
+    </div>
+
+    <div class="container" id="admin-section">
+        <div class="container">
+            <form class="form__form" id="product-form">
+                <h2 class="text-center">Registrar un producto</h2>
+                <div class="form-group">
+                    <input type="text" class="form-control m-1" placeholder="Enter name" name="name"
+                        id="product-input-name" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control m-1" placeholder="Enter description" name="description"
+                        id="product-input-description" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control m-1" placeholder="Enter price" name="price"
+                        id="product-input-price" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control m-1" placeholder="Enter thumbnail" name="thumbnail"
+                        id="product-input-thumbnail" />
+                </div>
+                <button type="submit" class="btn btn-primary m-3">Agregar</button>
+            </form>
+        </div>
+
+
+        <div class="container ">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">Carrito</h1>
+                    <div id="prdtCartList"></div>
+                    <script type="text/x-handlebars-template" id="template">
+                        {{#if listExist}}
+                        <ul class="list-group">
+                        <button type="button" class="btn btn-outline-danger m-3" id="delete-all">Delete All</button>
+                        {{#each list}}
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-3">
+                                    <img src="{{this.thumbnail}}" alt="Imagen del producto" class="img-thumbnail">
+                                    </div>
+                                    <div div class="col-9">
+                                    <h3>{{this.title}}</h3>
+                                    <p>{{this.price}}</p>
+                                    <p>{{this.description}}</p>
+                                    <p>{{this.timestamp}}</p>
+                                    <button type="button" class="btn btn-outline-danger btn-delete-item-cart"  data-code={{this.code}}>Delete Item</button>
+                                    </div>
+                                </div>
+                            </li>
+                        {{/each}}
+                        {{/if}}
+                        <script type="text/javascript">
+                            $(".btn-delete-item-cart").click((e) => {
+                                const code = e.target.dataset.code
+                                fetch('/api/carrito/' + code, {
+                                    method: "DELETE",
+                                    headers: {
+                                        'Content-type': 'application/json'
+                                    }
+                                }).then(res => {
+                                    if (res.status === 200) {
+                                        socket.emit("change-list-cart");
+                                    }
+                                })
+                            })
+
+                            $("#delete-all").click(() => {
+                                fetch("/api/carrito", {
+                                    method: "DELETE",
+                                }).then((res) => {
+                                    if (res.status == 200) {
+                                        socket.emit("change-list-cart");
+                                    }
+                                });
+                            });
+
+                        </script>
+                    </script>
+                </div>
+            </div>
+        </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+    integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+    integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+
+<script src="./js/userCart.js"></script>
+
+
+</html>

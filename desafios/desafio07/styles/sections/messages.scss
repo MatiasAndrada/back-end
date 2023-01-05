@@ -1,0 +1,60 @@
+@use "../abstracts/vars.scss" as *;
+@use "../abstracts/fn.scss" as *;
+
+.messages__container {
+  background-color: map-get($colors, C);
+  padding: 1rem;
+
+  .messages__title {
+    color: map-get($colors, F);
+    font-family: $font-paragraph;
+    font-size: map-get($headings, h3);
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.3rem;
+    width: 100%;
+    text-shadow: shadow(map-get($colors, A));
+  }
+  .messages__label {
+    color: map-get($colors, A);
+    font-family: $font-paragraph;
+    font-size: map-get($headings, p);
+    text-align: start;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+  }
+  .messages__input {
+    width: 80%;
+  }
+  .messgaes__btn {
+    padding: 9px 24px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+
+  .list__message {
+    list-style: none;
+    padding: 0;
+    height: 80vh;
+    overflow-y: scroll;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+  }
+  .messages__container__message {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    color: map-get($colors, F);
+    font-family: $font-paragraph;
+    font-size: map-get($headings, p);
+    text-align: start;
+    margin: 5px;
+    padding: 1rem;
+    width: 80%;
+    border: map-get($b-radius, medium);
+    text-shadow: shadow(map-get($colors, A));
+  }
+}

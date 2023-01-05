@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "Hello";
+  font-weight: 900;
+  src: local("Hello"), url(../../assets/fonts/Hello.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v49/TK3_WkUHHAIjg75cFRf3bXL8LICs13FvsUJiZTaR.woff2) format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+.form__container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2C12E;
+}
+.form__container .form__title {
+  color: #0099DD;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+  max-width: 500px;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0099DD, 0 0 82px #0099DD, 0 0 92px #0099DD, 0 0 102px #0099DD, 0 0 151px #0099DD;
+  margin-top: 1rem;
+}
+.form__container .form__subtitle {
+  font-size: 1.1em;
+  font-family: "Oswald";
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+}
+.form__container .form__form {
+  width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form__container .form__form .form-group .text__item {
+  color: #0099DD;
+}
+.form__container .form__form .btn {
+  align-items: center;
+}
+
+.list-group {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  background-color: #0099DD;
+}
+.list-group .list-group__item {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+.list-group .list-group__item .list-group__item__img {
+  width: 140px;
+  height: auto;
+}
+.list-group .list-group__item .list-group__item__title {
+  color: #0099DD;
+  font-size: 2rem;
+  font-family: "Roboto";
+  text-align: center;
+  padding: 1rem;
+  background-color: 1.6em;
+  margin-top: 1rem;
+}
+.list-group .list-group__item .list-group__item__price {
+  color: #db3b23;
+  font-size: 1.1em;
+  font-family: "Oswald";
+  text-align: center;
+  padding: 1rem;
+  max-width: 500px;
+  margin-top: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,44 @@
+@use "../abstracts/vars.scss" as *;
+@use "../abstracts/fn.scss" as *;
+
+.form__container {
+  background-color: map-get($colors, G);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  height: 100vh;
+  .form__title {
+    color: map-get($colors, C);
+    font-size: 2rem;
+    font-family: $font-title;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: 500px;
+    text-shadow: shadow(map-get($colors, C));
+    margin-top: 1rem;
+  }
+
+
+  .form__form {
+    width: 600px;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form-group {
+      margin: 18px;
+      .text__item {
+      
+        color: map-get($colors, C);
+      }
+    }
+
+    .btn {
+      align-items: center;
+    }
+  }
+}

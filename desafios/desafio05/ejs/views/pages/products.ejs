@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs') %>
+  </head>
+  <body>
+    <%- include('../partials/header.ejs')%> 
+    <% if (listExist) { %>
+    <ul class="list-group">
+      <% listProducts.forEach(function(prdt){ %>
+      <li class="list-group-item list-group__item">
+        <img
+          class="list-group__item__img"
+          src="<%= prdt.thumbnail %>"
+          alt="product"
+        />
+        <h3 class="list-group__item__title"><%= prdt.name %></h3>
+        <p class="list-group__item__price">$<%= prdt.price %></p>
+      </li>
+      <% }) %>
+    </ul>
+    <% } %>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+@forward "./abstracts/vars.scss";
+@forward "./abstracts/fn.scss";
+
+
+
+  //sections
+@use "./sections/form.scss";
+@use "./sections/products.scss";
+@use "./sections/header.scss";
+
+
+
+
+
+//reset
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  

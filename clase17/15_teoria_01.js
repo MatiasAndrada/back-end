@@ -1,0 +1,28 @@
+/*Mongodb es una base de datos no relacional 
+studio3t es una interfaz para interactuar con mongodb  
+
+
+A continuación se muestra un enunciado para trabajar con bases de datos SQL:
+Crear una base de datos llamada 'mibase'
+Crear una tabla dentro de esa base con el nombre 'usuarios' que contenga los siguientes campos:
+    - 'nombre' del tipo varchar no nulo
+    - 'apellido' del tipo varchar no nulo
+    - 'edad' del tipo entero sin signo
+    - 'email' del tipo varchar no nulo
+    - 'id' clave primaria autoincremental no nula
+Insertar estos 3 usuarios en esa tabla
+    - Juan Perez edad 23 jp@gmail.com
+    - Pedro Mei edad 21 pm@gmail.com
+    - Juana Suarez edad 25 js@gmail.com
+Listar las tablas existentes
+Listar los usuarios agregados
+
+
+En base al enunciado:
+1) Conformar las operaciones de consulta apropiadas para realizar los mismos procedimientos utilizando un cliente CLI de MongoDB.
+2) Crear una conexión local hacia el motor de base de datos MongoDB mediante el cliente ROBO 3T
+3) Con ROBO 3T acceder y visualizar la base, colecciones y documentos creados.
+
+Notas: 
+El campo id lo crea automáticamente el motor de base de datos MongoDB y se llama _id almacenando un ObjectID.
+*/

@@ -1,0 +1,15 @@
+[2023-01-04T17:11:11.160] [INFO] default - Servidor inicializado en el puerto 8080
+[2023-01-04T17:11:48.401] [WARN] default - Se intentó acceder a un recurso inexistente: /sumar/5/6
+[2023-01-04T17:12:22.351] [ERROR] default - Error: uno de los parámetros no es un número
+[2023-01-04T17:12:30.601] [ERROR] default - Error: uno de los parámetros no es un número
+[2023-01-04T17:12:38.190] [ERROR] default - Error: uno de los parámetros no es un número
+[2023-01-04T17:12:45.888] [ERROR] default - Error: uno de los parámetros no es un número
+[2023-01-04T17:17:19.477] [WARN] default - Se intentó acceder a un recurso inexistente: /sumar:7
+[2023-01-04T17:17:35.167] [INFO] default - Servidor inicializado en el puerto 8080
+[2023-01-04T17:17:39.500] [WARN] default - Se intentó acceder a un recurso inexistente: /sumar:7
+[2023-01-04T17:17:52.758] [WARN] default - Se intentó acceder a un recurso inexistente: /sumar/7/9
+[2023-01-04T17:19:39.153] [INFO] default - Servidor inicializado en el puerto 8080
+[2023-01-04T17:19:42.489] [INFO] default - Se sumaron 2 y 3
+[2023-01-04T17:19:45.426] [INFO] default - Se sumaron 2 y 3
+[2023-01-04T17:19:45.756] [INFO] default - Se sumaron 2 y 3
+[2023-01-04T17:19:46.099] [INFO] default - Se sumaron 2 y 3

@@ -1,0 +1,13 @@
+{{> defaultList }}
+
+
+<h1> Datos de Usuarios </h1>
+{{#if listExist}}
+<ul>
+    {{#each userList}}
+        <li>{{this.nombre}}</li>
+        <li>{{this.apellido}}</li>
+    {{/each}}
+
+</ul>
+{{/if}}

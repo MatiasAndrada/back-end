@@ -1,0 +1,17 @@
+doctype html
+html
+  include ../includes/head.pug
+body
+  include ../includes/header.pug
+  if listExist
+    ul(class="list-group")
+      each product in listProducts
+        li(class="list-group-item")
+          div(class="row")
+            div(class="col-6")
+              img(class="img-thumbnail" src=product.thumbnail width="250" height="350")
+            div(class="col-6")
+              h4(class="list-group-item-heading")= product.name
+              p(class="list-group-item-text ")= "$" + product.price
+              a(class="btn btn-danger" href="/delete/" + product.id) Eliminar
+

@@ -1,0 +1,22 @@
+@use "../abstracts/vars.scss" as *;
+
+.navbar {
+  background-color: map-get($colors, A);
+  display: flex;
+  height: 120px;
+
+  .text-link {
+    color: map-get($colors, A);
+    font-family: $font-title;
+    font-size: map-get($headings, h3);
+    padding: 5px 25px;
+    background-color: map-get($colors, B);
+    border-radius: map-get($b-radius, large);
+    text-decoration: none;
+    margin: 0 1em;
+
+    &:hover {
+      color: map-get($colors, C);
+    }
+  }
+}

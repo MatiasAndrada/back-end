@@ -1,0 +1,55 @@
+@use "../abstracts/vars.scss" as *;
+@use "../abstracts/fn.scss" as *;
+
+.form__container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: map-get($colors, G);
+
+  .form__title {
+    color: map-get($colors, C);
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: 500px;
+    text-shadow: shadow(map-get($colors, C));
+
+    margin-top: 1rem;
+  }
+
+  .form__subtitle {
+    color: map-get($colors, grey);
+    font-size: map-get($headings, p);
+    font-family: $font-subtitle-condensed;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .form__form {
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form-group {
+      .text-item {
+        color: map-get($colors, C);
+      }
+    }
+
+    .btn {
+      align-items: center;
+    }
+  }
+}

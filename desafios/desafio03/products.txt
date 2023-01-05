@@ -1,0 +1,44 @@
+[
+  {
+    "tipo": "Ravioles",
+    "precio": "$230",
+    "img": "img/products/product_dinner/comida/ravioles.jpg",
+    "id": 1
+  },
+  {
+    "tipo": "Fideos con salsa",
+    "precio": "$220",
+    "img": "img/products/product_dinner/comida/fideos-salsa.jpg",
+    "id": 2
+  },
+  {
+    "tipo": "Fideos con crema",
+    "precio": "$180",
+    "img": "img/products/product_dinner/comida/fideos-crema.jpg",
+    "id": 3
+  },
+  {
+    "tipo": "Milanesa con papas",
+    "precio": "$155",
+    "img": "img/products/product_dinner/comida/milanesa-papas.jpg",
+    "id": 4
+  },
+  {
+    "tipo": "Carne asada",
+    "precio": "$240",
+    "img": "img/products/product_dinner/comida/carne-asada.jpg",
+    "id": 5
+  },
+  {
+    "tipo": "Altura maxina",
+    "precio": "$120",
+    "img": "img/products/product_dinner/vinos/altura-maxima.jpg",
+    "id": 6
+  },
+  {
+    "tipo": "Paso a paso",
+    "precio": "$85",
+    "img": "img/products/product_dinner/vinos/paso-a-paso.jpg",
+    "id": 7
+  }
+]

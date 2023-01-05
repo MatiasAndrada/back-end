@@ -1,0 +1,16 @@
+@forward "./abstracts/vars.scss";
+@forward "./abstracts/fn.scss";
+
+//sections
+@use "./sections/head.scss";
+@use "./sections/form.scss";
+@use "./sections/products.scss";
+@use "./sections/messages.scss";
+
+//reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: auto;
+}

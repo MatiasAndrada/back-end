@@ -1,0 +1,10 @@
+{{#if listExist}}
+  <ul class="list-group row list__message">
+    {{#each list}}
+      <li class="list-group-item messages__container__message">
+        <p><strong>{{this.user}}</strong>: {{this.message}}</p>
+        <p class="text-end"><small>{{this.date}}</small></p>
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}

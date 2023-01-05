@@ -1,0 +1,23 @@
+// Path: desafios\desafio10\nginxNode\server.js
+
+start nginx
+
+
+Ejemplo de ejecucion en nodemon en modo FORK:
+npm start 8081
+
+CLUSTER
+pm2 start server.js --name="Server1" --watch -- 8081
+pm2 start server.js --name="Server2" --watch -i 2 -- 8082 CLUSTER 
+pm2 start server.js --name="Server3" --watch -i 2 -- 8083 CLUSTER 
+pm2 start server.js --name="Server4" --watch -i 2 -- 8084 CLUSTER 
+pm2 start server.js --name="Server5" --watch -i 2 -- 8085 CLUSTER
+
+pm2 list 
+tasklist /fi "imagename eq node.exe" -> lista todos los procesos de node.js activos
+
+
+//forever
+forever start server.js 8081
+forever start server.js 8082
+forever list

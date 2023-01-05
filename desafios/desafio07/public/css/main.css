@@ -1,0 +1,182 @@
+@font-face {
+  font-family: "Amatic SC";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/amaticsc/v24/TUZ3zwprpvBS1izr_vOMscGKfLUC7WQ.woff2) format("woff2");
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mulish/v12/1Ptyg83HX_SGhgqO0yLcmjzUAuWexc1R8aevGw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/prompt/v10/-W_8XJnvUD7dzB2Ck_kIZ2MuQ5Q.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+.navbar {
+  background-color: #000000;
+  display: flex;
+  height: 120px;
+}
+.navbar .text-link {
+  color: #000000;
+  font-family: "Amatic SC";
+  font-size: 1.6em;
+  padding: 5px 25px;
+  background-color: #1729c5;
+  border-radius: 1.2em;
+  text-decoration: none;
+  margin: 0 1em;
+}
+.navbar .text-link:hover {
+  color: #0099DD;
+}
+
+.form__container {
+  background-color: #F2C12E;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  height: 100vh;
+}
+.form__container .form__title {
+  color: #0099DD;
+  font-size: 2rem;
+  font-family: "Amatic SC";
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+  max-width: 500px;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0099DD, 0 0 82px #0099DD, 0 0 92px #0099DD, 0 0 102px #0099DD, 0 0 151px #0099DD;
+  margin-top: 1rem;
+}
+.form__container .form__form {
+  width: 600px;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form__container .form__form .form-group {
+  margin: 18px;
+}
+.form__container .form__form .form-group .text__item {
+  color: #0099DD;
+}
+.form__container .form__form .btn {
+  align-items: center;
+}
+
+.list__product {
+  list-style: none;
+  padding: 8px;
+  height: 80vh;
+  overflow-y: scroll;
+  word-wrap: break-word;
+  background-color: #00ca54;
+  display: flex;
+  flex-direction: column;
+}
+
+.list__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #000000;
+  padding: 10px 0;
+  height: auto;
+}
+
+.list__item--img {
+  height: 80px;
+  object-fit: cover;
+  border-radius: 0.3em;
+}
+
+.list__item--title {
+  font-family: "Amatic SC";
+  font-size: 1.6em;
+  align-self: center;
+  color: white;
+}
+
+.list__item--total {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.3em;
+  align-self: center;
+  color: white;
+}
+
+.messages__container {
+  background-color: #0099DD;
+  padding: 1rem;
+}
+.messages__container .messages__title {
+  color: #db3b23;
+  font-family: "Prompt", sans-serif;
+  font-size: 1.6em;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.3rem;
+  width: 100%;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #000000, 0 0 82px #000000, 0 0 92px #000000, 0 0 102px #000000, 0 0 151px #000000;
+}
+.messages__container .messages__label {
+  color: #000000;
+  font-family: "Prompt", sans-serif;
+  font-size: 1.1em;
+  text-align: start;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+}
+.messages__container .messages__input {
+  width: 80%;
+}
+.messages__container .messgaes__btn {
+  padding: 9px 24px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.messages__container .list__message {
+  list-style: none;
+  padding: 0;
+  height: 80vh;
+  overflow-y: scroll;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+}
+.messages__container .messages__container__message {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  color: #db3b23;
+  font-family: "Prompt", sans-serif;
+  font-size: 1.1em;
+  text-align: start;
+  margin: 5px;
+  padding: 1rem;
+  width: 80%;
+  border: 0.8em;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #000000, 0 0 82px #000000, 0 0 92px #000000, 0 0 102px #000000, 0 0 151px #000000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: auto;
+}
