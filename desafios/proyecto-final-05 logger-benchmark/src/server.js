@@ -8,6 +8,12 @@ const { Server: HtppServer } = require("http");
 const { Server: IOServer } = require("socket.io");
 const dbConfig = require("./config");
 const mongoose = require("mongoose");
+const AWS = require('aws-sdk');
+
+
+AWS.config.update({
+  region: 'us-east-1',
+})
 
 const app = express();
 mongoose.connect(dbConfig.mongodb.cnxStr);
